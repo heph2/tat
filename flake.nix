@@ -18,5 +18,9 @@
 	        vendorSha256 = "sha256-NknIeFrOCGzEM5gCPJ0JrFXzcKSbd5zdHw+1Nb0uhSw=";
 	      };
       };
+      apps.default = {
+        type = "app";
+        program = "${self.packages.${system}.default}/bin/tat";
+      };
     });
 }
